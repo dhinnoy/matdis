@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Enkripsi/Dekripsi RSA (Client-Side)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Enkripsi/Dekripsi RSA</h1>
+
+        <section id="key-generation">
+            <h2>1. Generate Kunci RSA</h2>
+            <button id="generateKeysBtn">Generate Kunci Baru</button>
+            <div class="output-group">
+                <label for="publicKey">Kunci Publik (e, n):</label>
+                <textarea id="publicKey" rows="2" readonly></textarea>
+            </div>
+            <div class="output-group">
+                <label for="privateKey">Kunci Privat (d, n):</label>
+                <textarea id="privateKey" rows="2" readonly></textarea>
+            </div>
+        </section>
+
+        <section id="encryption">
+            <h2>2. Enkripsi Pesan</h2>
+            <div class="input-group">
+                <label for="messageToEncrypt">Pesan Asli:</label>
+                <textarea id="messageToEncrypt" rows="3" placeholder="Masukkan pesan yang akan dienkripsi"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="publicKeyEncrypt">Kunci Publik (e, n):</label>
+                <textarea id="publicKeyEncrypt" rows="2" placeholder="Masukkan kunci publik (e, n)"></textarea>
+            </div>
+            <button id="encryptBtn">Enkripsi Pesan</button>
+            <div class="output-group">
+                <label for="encryptedMessage">Pesan Terenkripsi:</label>
+                <textarea id="encryptedMessage" rows="3" readonly></textarea>
+            </div>
+        </section>
+
+        <section id="decryption">
+            <h2>3. Dekripsi Pesan</h2>
+            <div class="input-group">
+                <label for="messageToDecrypt">Pesan Terenkripsi:</label>
+                <textarea id="messageToDecrypt" rows="3" placeholder="Masukkan pesan terenkripsi"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="privateKeyDecrypt">Kunci Privat (d, n):</label>
+                <textarea id="privateKeyDecrypt" rows="2" placeholder="Masukkan kunci privat (d, n)"></textarea>
+            </div>
+            <button id="decryptBtn">Dekripsi Pesan</button>
+            <div class="output-group">
+                <label for="decryptedMessage">Pesan Terdekripsi:</label>
+                <textarea id="decryptedMessage" rows="3" readonly></textarea>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/big-integer@1.6.51/BigInteger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
