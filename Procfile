@@ -1,2 +1,2 @@
-web: python api/main.py
+web: python main.py
 
