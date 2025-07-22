@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // URL API Anda. Saat di-deploy ke Vercel, ini akan menjadi URL proyek Vercel Anda.
     // Selama pengembangan lokal, Anda bisa menggunakan 'http://127.0.0.1:5000'
-    const API_BASE_URL = window.location.hostname === 'localhost' ? 'http://127.0.0.1:5000' : 'https://matdis-git-master-dhini-handayanis-projects.vercel.app/'; // Ganti dengan nama proyek Vercel Anda
+    const API_BASE_URL = window.location.hostname === 'localhost' ? 'http://127.0.0.1:5000' : 'https://matdis-xl.vercel.app'; // Ganti dengan nama proyek Vercel Anda
 
     // Elemen DOM
     const primePInput = document.getElementById('primeP');
